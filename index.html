@@ -76,6 +76,7 @@ text-align:center;
 /* Orbs */
 .orb {
     display: inline-block;
+	text-align: center;
     margin: 15px;
     padding: 10px 10px;
     border-radius: 40px;
@@ -87,6 +88,14 @@ text-align:center;
 
 .orb:hover {
     transform: scale(1.1);
+}
+
+.orb-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
 }
 
 #nicknameMessage {
@@ -245,38 +254,13 @@ margin-bottom:20px;
 
 <div id="life" class="section-content">
 <h2>You are my</h2>
-<div class="orb" onclick="showMessage('because you are my melody 🎶')">Siri 💖</div>
-<div class="orb" onclick="showMessage('because you are my sweetest comfort 🫶')">Puttu 🧸</div>
-<div class="orb" onclick="showMessage('because you are my little world 🌍')">Kunjamma 🌸</div>
-<div class="orb" onclick="showMessage('because you are my playful soul 😄')">Chella kutty ✨</div>
-<div class="orb" onclick="showMessage('because you carry grace like a QUEEN 👑')">Begum Sahiba 🌹</div>
-<p id="nicknameMessage"></p>
+<div class="orb-container">
+	<div class="orb" onclick="showMessage('because you are my melody 🎶')">Siri 💖</div>
+	<div class="orb" onclick="showMessage('because you are my sweetest comfort 🫶')">Puttu 🧸</div>
+	<div class="orb" onclick="showMessage('because you are my little world 🌍')">Kunjamma 🌸</div>
+	<div class="orb" onclick="showMessage('because you are my playful soul 😄')">Chella kutty ✨</div>
+	<div class="orb" onclick="showMessage('because you carry grace like a QUEEN 👑')">Begum Sahiba 🌹</div>
 </div>
-
-
-<div id="journey" class="section-content">
-<h2>From strangers to forever 💕</h2>
-
-<div class="card">🌸 The day I met you, something inside me quietly chose you.</div>
-
-<div class="card">💫 Every laugh became a light I carry even on heavy days.</div>
-
-<div class="card">🌍 As you prepare to leave your beautiful world behind…  
-I see your courage. I respect it. I do not take it lightly.</div>
-
-<div class="card">💍 My dream is to hold your hand not just tomorrow —  
-but in every tomorrow after that.</div>
-
-</div>
-
-<div id="life" class="section-content">
-<h2>You are my</h2>
-<div class="orb" onclick="showMessage('because you are my melody')">Siri</div>
-<div class="orb" onclick="showMessage('because you are my sweetest comfort')">Puttu</div>
-<div class="orb" onclick="showMessage('because you are my little world')">Kunjamma</div>
-<div class="orb" onclick="showMessage('because you are my playful soul')">Chella kutty</div>
-<div class="orb" onclick="showMessage('because you carry grace like a QUEEN')">Begum Sahiba</div>
-
 <p id="nicknameMessage"></p>
 </div>
 
@@ -520,6 +504,7 @@ document.getElementById(id).style.display="block";
 
 </body>
 </html>
+
 
 
 
