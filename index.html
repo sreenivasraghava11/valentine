@@ -213,11 +213,15 @@ margin-bottom:20px;
 </div>
 
 <!-- MUSIC -->
-<audio id="music" preload="auto">
-  <source src="yedhemaina_sakhi.mp3" type="audio/mpeg">
+<audio id="mainSong" preload="auto" controls>
+  <source src="./yedhemaina_sakhi.mp3" type="audio/mpeg">
 </audio>
 
+<button onclick="document.getElementById('mainSong').play()">
+Test Music
+</button>
 
+	
 <!-- MAIN CONTENT -->
 <div id="content">
 
@@ -504,3 +508,4 @@ document.getElementById(id).style.display="block";
 
 </body>
 </html>
+
