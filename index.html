@@ -379,6 +379,28 @@ the forever I believe in, and the choice I want to keep making every single day 
     and walk through every chapter — hand in hand ✋✨<br>
     </div>
 </div>
+
+<div id="finalWish" 
+     style="display:none; position:fixed; inset:0; 
+     background:rgba(18,0,10,0.95); 
+     color:#ffe6ee; 
+     justify-content:center; 
+     align-items:center; 
+     text-align:center; 
+     padding:30px; 
+     z-index:20; 
+     flex-direction:column;">
+
+    <h1 style="font-size:2rem;">
+        And if destiny is kind to me… 💫
+    </h1>
+
+    <p style="font-size:1.3rem; max-width:600px; margin-top:20px;">
+        I hope every chapter of my life begins and ends with you.
+        Happy Valentine’s Day Padmasri garu ❤️ 😊
+    </p>
+
+</div>
     
 <script>
 
@@ -477,14 +499,17 @@ function showSection(id){
     if(selected){
         selected.style.display="block";
     }
+
+    // 🌟 If dream section is opened
+    if(id === "dream"){
+        setTimeout(()=>{
+            let wish = document.getElementById("finalWish");
+            wish.style.display = "flex";
+        },15000); // 15 seconds
+    }
 }
 
 
 </script>
 </body>
 </html>
-
-
-
-
-
