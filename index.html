@@ -208,7 +208,7 @@ margin-bottom:20px;
 <h2>Only for You</h2>
 <input type="password" id="pwd" placeholder="Enter the word">
 <br><br>
-<button onclick="unlock()">Enter</button>
+<button onclick="unlock(); startMusic();">Enter</button>
 </div>
 </div>
 
@@ -474,6 +474,22 @@ function unlock(){
     }
 }
 
+function startMusic(){
+    let main = document.getElementById("mainSong");
+
+    if(main){
+        main.volume = 0.5;
+        main.play().catch(()=>{});
+
+        main.ontimeupdate = function(){
+            if(main.currentTime >= 233.5){
+                main.currentTime = 0;
+            }
+        };
+    }
+}
+
+	
 function petals(){
     for(let i=0;i<20;i++){
         let p=document.createElement("div");
@@ -508,4 +524,5 @@ document.getElementById(id).style.display="block";
 
 </body>
 </html>
+
 
