@@ -70,26 +70,23 @@ text-align:center;
 
 /* ORBS */
 .orb {
-display:inline-block;
-margin:15px;
-padding:10px 10px;
-border-radius:40px;
-background:linear-gradient(135deg,#ff6fa5,#b1124b);
-cursor:pointer;
-transition:0.4s;
-font-size:1rem;
-position:relative;
-overflow:hidden;
+    padding: 10px 12px;
+    border-radius: 40px;
+    background: linear-gradient(135deg, #ff6fa5, #b1124b);
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: 0.95rem;
+    text-align: center;
 }
 
 .orb:hover{ transform:scale(1.1); }
 
-.orb-container{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-margin-top:20px;
+.orb-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    max-width: 500px;
+    margin: 20px auto;
 }
 
 #nicknameMessage{
@@ -322,3 +319,4 @@ document.getElementById(id).style.display="block";
 </script>
 </body>
 </html>
+
