@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TO MY LOVE 💖</title>
+
+<style>
+body{
+margin:0;
+font-family:'Georgia',serif;
+background:radial-gradient(circle at top,#4a0c2a,#12000a 70%);
+color:#ffe6ee;
+text-align:center;
+overflow-x:hidden;
+}
+
+/* Background Glow */
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background:radial-gradient(circle at center,rgba(255,105,180,0.12),transparent 60%);
+z-index:-1;
+}
+
+/* Smooth transitions */
+#intro, #lock, #content{
+transition:opacity 1.5s ease;
+}
+
+/* INTRO SCREEN */
+#intro{
+position:fixed;
+inset:0;
+background:radial-gradient(circle,#4a0c2a,#12000a);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:10;
+}
+
+.intro-heart{
+font-size:4.5rem;
+margin:20px 0;
+animation:introPulse 2.5s infinite ease-in-out;
+text-shadow:0 0 20px #ff4d88,0 0 40px #ff1a66,0 0 60px rgba(255,0,80,0.6);
+}
+
+@keyframes introPulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.12);}
+100%{transform:scale(1);}
+}
+
+/* PASSWORD SCREEN */
+#lock{
+display:none;
+position:fixed;
+inset:0;
+background:radial-gradient(circle,#3b0a24,#12000a);
+justify-content:center;
+align-items:center;
+z-index:9;
+}
+
+#lock input{
+padding:12px;
+border-radius:8px;
+border:none;
+font-size:1rem;
+margin-top:10px;
+text-align:center;
+}
+
+/* Orbs */
+.orb {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px 10px;
+    border-radius: 40px;
+    background: linear-gradient(135deg, #ff6fa5, #b1124b);
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: 1rem;
+}
+
+.orb:hover {
+    transform: scale(1.1);
+}
+
+#nicknameMessage {
+    margin-top: 25px;
+    font-style: italic;
+    font-size: 1.3rem;
+    min-height: 40px;
+}
+
+
+/* Buttons */
+button{
+background:rgba(255,105,180,0.15);
+border:1px solid #ff6fa5;
+color:white;
+padding:10px 18px;
+border-radius:30px;
+cursor:pointer;
+transition:0.4s;
+}
+
+button:hover{
+background:#ff6fa5;
+box-shadow:0 0 15px #ff6fa5;
+}
+
+/* MAIN CONTENT */
+#content{
+display:none;
+padding:60px 20px;
+animation:fadeIn 2s ease;
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+/* Big glowing heart */
+.heart{
+font-size:5rem;
+margin-top:10px;
+animation:pulse 2s infinite;
+text-shadow:0 0 20px #ff4d88,0 0 40px #ff1a66;
+}
+
+@keyframes pulse{
+50%{transform:scale(1.15);}
+}
+
+.main-line{
+font-size:1.7rem;
+margin:30px 0;
+line-height:1.6;
+}
+
+/* Menu */
+.menu{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+margin-bottom:25px;
+}
+
+/* Sections */
+.section-content{
+display:none;
+max-width:750px;
+margin:20px auto;
+padding:25px;
+background:rgba(255,255,255,0.07);
+border-radius:20px;
+font-size:1.2rem;
+line-height:1.9;
+text-align:left;
+backdrop-filter:blur(6px);
+animation:fadeIn 1.5s ease;
+}
+
+/* Rose */
+.rose{
+font-size:3.5rem;
+text-align:center;
+cursor:pointer;
+animation:pulse 2s infinite;
+}
+
+/* Petals */
+.petal {
+    position: fixed;
+    top: -10%;
+    font-size: 22px;
+    animation: fall linear infinite;
+}
+
+@keyframes fall{
+to{transform:translateY(110vh) rotate(360deg);}
+}
+
+h2{
+text-align:center;
+margin-bottom:20px;
+}
+</style>
+</head>
+
+<body>
+<!-- INTRO -->
+<div id="intro">
+<h1>Hello Miss Karnam Padmasri Garu 💖</h1>
+<div class="intro-heart">💖</div>
+<button onclick="openLock()">Please open slowly…💖</button>
+</div>
+
+<!-- PASSWORD -->
+<div id="lock">
+<div>
+<h2>Only for You</h2>
+<input type="password" id="pwd" placeholder="Enter the word">
+<br><br>
+<button onclick="unlock()">Enter</button>
+</div>
+</div>
+
+<!-- MUSIC -->
+<audio id="music" preload="auto">
+  <source src="yedhemaina_sakhi.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- MAIN CONTENT -->
+<div id="content">
+
+<h1>Welcome to my world Siri Madam 🌹</h1>
+<div class="heart">💖</div>
+
+<div class="main-line">
+<br>From just one meeting to a lifetime feeling, you became the calm I trust, the forever I believe in, and the choice I want to keep making every single day.<br>
+</div>
+
+<div class="menu">
+<button onclick="showSection('journey')">Our Journey 🌙</button>
+<button onclick="showSection('life')">You in My Life 💖</button>
+<button onclick="showSection('letter')">💌 To My Siri</button>
+<button onclick="showSection('dream')">My Dream With You ✨</button>
+</div>
+
+<div id="journey" class="section-content">
+<h2>From strangers to forever 💕</h2>
+<div class="card">🌸 The day I met you, something inside me quietly chose you.</div>
+<div class="card">💫 Every laugh became a light I carry even on heavy days.</div>
+<div class="card">🌍 As you prepare to leave your beautiful world behind… I see your courage. I respect it. I do not take it lightly.</div>
+<div class="card">💍 My dream is to hold your hand not just tomorrow — but in every tomorrow after that.</div>
+</div>
+
+<div id="life" class="section-content">
+<h2>You are my</h2>
+<div class="orb" onclick="showMessage('because you are my melody 🎶')">Siri 💖</div>
+<div class="orb" onclick="showMessage('because you are my sweetest comfort 🫶')">Puttu 🧸</div>
+<div class="orb" onclick="showMessage('because you are my little world 🌍')">Kunjamma 🌸</div>
+<div class="orb" onclick="showMessage('because you are my playful soul 😄')">Chella kutty ✨</div>
+<div class="orb" onclick="showMessage('because you carry grace like a QUEEN 👑')">Begum Sahiba 🌹</div>
+<p id="nicknameMessage"></p>
+</div>
+
+
+<div id="journey" class="section-content">
+<h2>From strangers to forever 💕</h2>
+
+<div class="card">🌸 The day I met you, something inside me quietly chose you.</div>
+
+<div class="card">💫 Every laugh became a light I carry even on heavy days.</div>
+
+<div class="card">🌍 As you prepare to leave your beautiful world behind…  
+I see your courage. I respect it. I do not take it lightly.</div>
+
+<div class="card">💍 My dream is to hold your hand not just tomorrow —  
+but in every tomorrow after that.</div>
+
+</div>
+
+<div id="life" class="section-content">
+<h2>You are my</h2>
+<div class="orb" onclick="showMessage('because you are my melody')">Siri</div>
+<div class="orb" onclick="showMessage('because you are my sweetest comfort')">Puttu</div>
+<div class="orb" onclick="showMessage('because you are my little world')">Kunjamma</div>
+<div class="orb" onclick="showMessage('because you are my playful soul')">Chella kutty</div>
+<div class="orb" onclick="showMessage('because you carry grace like a QUEEN')">Begum Sahiba</div>
+
+<p id="nicknameMessage"></p>
+</div>
+
+<div id="letter" class="section-content">
+<h2>Only For You. No One Else</h2>
+<div class="rose" onclick="revealLetter()">Tap to Unwrap Something Sweet 💌</div>
+
+<div id="letterContent" style="display:none;margin-top:25px;opacity:0;transition:opacity 1.5s ease;">
+<p><strong>My dear Siri 🙂,</strong></p>
+<p>One meeting.
+One call.
+One hour and fifty-five minutes.
+
+That’s all it took.
+
+Not years.
+Not endless memories.
+Just 1 hour and 55 minutes —
+and somehow, my heart decided you were not ordinary.
+
+We met only once.
+We spoke just that one time.
+But somewhere between nervous pauses, random teasing, serious thoughts, and quiet honesty…
+you became someone my heart refuses to ignore.
+
+It’s strange, isn’t it?
+How connection doesn’t always depend on time, but on understanding.
+
+You came into my life quietly.
+Not with grand gestures, not with noise —
+but with calm, depth, and a certain honesty that made me feel safe.
+
+I admire the way you think.
+The way you overthink.
+The way you worry silently.
+The way you act strong for your parents even when you’re scared inside.
+
+You say you criticize yourself too much.
+But from where I stand, I see someone thoughtful, aware, and emotionally intelligent.
+You may not see your own light —
+but I do.
+
+I am not perfect.
+I joke too much.
+I take things lightly sometimes.
+But when it comes to you — I am serious.
+
+Not the heavy, suffocating serious.
+But the steady kind.
+The kind that stays.
+
+If life becomes stressful, I want to be your calm.
+If you overthink, I want to be your reassurance.
+If you’re scared about leaving everything behind after marriage,
+I want to be the place that feels like home.
+
+And yes…
+maybe this sounds dramatic. Maybe even cinematic.
+
+But when I think of Panigrahana,
+when your Appa places your hand in mine —
+I don’t see possession.
+I see responsibility.
+I see trust.
+I see privilege.
+
+Because you are not “mine” to own.
+You are someone I am blessed to walk beside.
+
+And if destiny truly listened to my prayers,
+then maybe… just maybe…
+you were the answer.
+
+So here I am —
+not claiming perfection,
+not promising fairy tales,
+
+But promising effort.
+Respect.
+Loyalty.
+And a partnership where we are equals —
+partners in life… and yes, partners in crime too 😄
+
+You are not just someone I love.
+You are someone I choose.
+Every single day.
+
+And if just 1 hour and 55 minutes could make me feel this much,
+imagine what a lifetime with you will be like.
+
+If loving you is a journey,
+I don’t want a destination.
+I just want to keep walking — with your hand in mine.
+</p>
+<p><strong>Happy Valentine’s Day ❤️</strong></p>
+<p><em>In every lifetime, I would still choose you.
+
+Yours —
+imperfectly, playfully, sincerely,
+always.</em></p>
+</div>
+</div>
+
+<div id="dream" class="section-content">
+<h2>My Dream With You ✨</h2>
+I don’t just want moments with you<br>
+I want a whole story 📖✨<br>
+
+A story that begins with our meetup 🌸,<br>
+slowly turns into attraction,<br>
+finds courage in realization and confession ❤️,<br>
+survives misunderstandings,<br>
+chooses to fix things together 🤝,<br>
+strengthens our trust,<br>
+makes promises that matter,<br>
+learns care and support 🫶,<br>
+and finally grows into togetherness.<br>
+
+I dream of a life where we grow, heal, laugh,stand by each other,<br>
+and walk through every chapter — hand in hand ✋✨<br>
+</div>
+
+</div>
+
+<script>
+function openLock(){
+let intro=document.getElementById("intro");
+intro.style.opacity="0";
+setTimeout(()=>{
+intro.style.display="none";
+document.getElementById("lock").style.display="flex";
+},1000);
+}
+
+function revealLetter(){
+    let letter = document.getElementById("letterContent");
+    let trigger = document.querySelector(".rose");
+
+    // Hide the tap text smoothly
+    trigger.style.opacity = "0";
+    trigger.style.transition = "opacity 0.6s ease";
+
+    setTimeout(()=>{
+        trigger.style.display = "none";
+    },600);
+
+    // Show the letter smoothly
+    letter.style.display = "block";
+    setTimeout(()=>{
+        letter.style.opacity = "1";
+    },100);
+}
+
+
+function unlock(){
+    let input = document.getElementById("pwd").value.trim();
+
+    if(input === "SIRI"){
+        let lock = document.getElementById("lock");
+        lock.style.opacity = "0";
+
+        setTimeout(()=>{
+            lock.style.display="none";
+            document.getElementById("content").style.display="block";
+			
+			let main = document.getElementById("mainSong");
+
+			if(main){
+
+				main.volume = 0.5;
+
+				main.play().then(()=>{
+					console.log("Music started");
+				}).catch(error=>{
+					console.log("Error:", error);
+				});
+
+				main.ontimeupdate = function(){
+					if(main.currentTime >= 233.5){ // stop before 3:54
+						main.currentTime = 0;
+					}
+				};
+			}
+
+            petals();
+
+        },1000);
+    }
+    else{
+        alert("Only the right way unlocks this 🌹");
+    }
+}
+
+function petals(){
+    for(let i=0;i<20;i++){
+        let p=document.createElement("div");
+        p.className="petal";
+        p.innerHTML="🌹";
+        p.style.left=Math.random()*100+"vw";
+        p.style.animationDuration=(6+Math.random()*5)+"s";
+        document.body.appendChild(p);
+    }
+}
+
+function showMessage(text){
+    let msg = document.getElementById("nicknameMessage");
+    msg.style.opacity = "0";
+    msg.style.transition = "opacity 0.4s ease";
+    setTimeout(()=>{
+        msg.innerHTML = text;
+        msg.style.opacity = "1";
+    },150);
+}
+
+
+function showSection(id){
+document.querySelectorAll('.section-content').forEach(sec=>{
+sec.style.display="none";
+});
+document.getElementById(id).style.display="block";
+}
+
+
+</script>
+
+</body>
+</html>
